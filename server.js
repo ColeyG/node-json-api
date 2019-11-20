@@ -22,12 +22,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 const indexRouter = require('./routes/index');
+const apiRoute = require('./routes/api');
 // const usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
+app.use('/api', apiRoute);
 // app.use('/users', usersRouter);
