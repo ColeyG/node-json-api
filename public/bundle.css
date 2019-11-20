@@ -348,4 +348,4 @@ template {
   display: none;
 }
 
-.sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}
+.sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}body{background-color:#eaf6ff}h1{font-size:32pt;font-family:Gentium Basic,serif}h1,p{color:#232528;font-weight:400;margin:0}p{font-size:12pt;font-family:Open Sans,sans-serif}.primary-nav{width:100%;padding:15px;background-color:#2a2a72}.primary-nav h1{color:#eaf6ff}
