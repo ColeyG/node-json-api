@@ -1,6 +1,22 @@
 @import "../node_modules/normalize.css/normalize.css";
 @import "./cold-lib.scss";
 
-body {
-  background-color: red;
+$black: #232528;
+$white: #eaf6ff;
+$blue: #2a2a72;
+$light-blue: #009ffd;
+$gold: #ffa400;
+
+@mixin gentium($color: $black, $size: 12pt, $weight: normal) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: "Gentium Basic", serif;
+}
+
+@mixin sans($color: $black, $size: 12pt, $weight: normal) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: "Open Sans", sans-serif;
 }
