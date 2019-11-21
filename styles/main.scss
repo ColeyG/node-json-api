@@ -40,6 +40,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  box-sizing: border-box;
   h1 {
     color: $white;
   }
@@ -65,5 +66,21 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  .card {
+    width: 200px;
+    background-color: white;
+    margin: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+    img {
+      width: 100%;
+    }
+    h2,
+    p {
+      @include sans($color: $black, $size: 12pt);
+      margin: 0px;
+      padding: 5px;
+    }
+  }
 }

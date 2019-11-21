@@ -17,7 +17,7 @@ const musicCollection = [
     image: 'https://lh3.googleusercontent.com/m9rGUab2vV3E-6NPO3kJOH72Nw8NkqFz2UfiP4kARZE_1N5KLDNRUj_aGCG39MIaUM0tvjOUuz0=w220-c-h220-e100-rwu-v1',
   }, {
     name: 'Green Day - American Idiot',
-    genre: 'Punk Rock',
+    genre: 'Punk',
     image: 'https://lh6.ggpht.com/zSn_kg7hiELA7K2cVf60QjrNO8tMbhJrddsrGmTdQQtIb9vl891-Unfg1ZGdeZfWE4U_VSZD=w220-c-h220-e100-rwu-v1',
   }, {
     name: 'Joji - Ballads 1',
@@ -183,7 +183,7 @@ router.get('/', (req, res, next) => {
   let iteration = 0;
 
   musicCollection.forEach((entry) => {
-    resp += `"${iteration}": {"name": "${entry.name}"},`;
+    resp += `"${iteration}": {"name": "${entry.name}","image": "${entry.image}","genre": "${entry.genre}"},`;
     iteration++;
   });
 
