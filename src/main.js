@@ -4,12 +4,12 @@ import 'promise-polyfill/src/polyfill';
 import 'whatwg-fetch';
 
 const cardsContainer = document.querySelector('.cards');
-const genre = document.querySelector('.sort').innerHTML;
+const genre = document.querySelector('.sort').innerHTML.replace('amp;', '');
 
-console.log(genre);
+console.log(encodeURIComponent(genre));
 
 async function fetchData() {
-  await fetch(`http://localhost:3000/api?genre=${genre}`, { method: 'GET', mode: 'cors' })
+  await fetch(`http://localhost:3000/api?genre=${encodeURIComponent(genre)}`, { method: 'GET', mode: 'cors' })
     .then((resp) => resp.json())
     .then((data) => {
       Object.keys(data).forEach((key) => {

@@ -77,15 +77,11 @@ const musicCollection = [
     genre: 'R&B',
     image: 'https://lh3.googleusercontent.com/8bwj0V4CaeHzpoiRKAry2ol3xhyd6cgs6cvJwd4guEN77JSjcJAfa3k6HxcvsA7wYKHnzL4CwQk=w220-c-h220-e100-rwu-v1',
   }, {
-    name: 'Depeche Mode - The Best of Depeche Mode',
-    genre: 'Pop',
-    image: 'https://lh3.googleusercontent.com/V9VHkg5gupb3V-MIH2YK_WQ2qLHpxvipeWb4m9U3I0mIpdI5vSFrOEDmSgHYwIUEp2e-I2gGIw=w220-c-h220-e100-rwu-v1',
-  }, {
     name: 'Joji - In Tongues',
     genre: 'Hip Hop',
-    image: 'https://lh3.googleusercontent.com/Glr3ggLn2fOowRY4IHLklyO05wMPQcJMo8NErTntOodiZlqAGwXwMhF1BcLrahWRjBw3bIMYKg=w220-c-h220-e100-rwu-v1',
+    image: 'https://lh3.googleusercontent.com/V9VHkg5gupb3V-MIH2YK_WQ2qLHpxvipeWb4m9U3I0mIpdI5vSFrOEDmSgHYwIUEp2e-I2gGIw=w220-c-h220-e100-rwu-v1',
   }, {
-    name: 'La La Land',
+    name: 'MGMT - LDA',
     genre: 'Pop',
     image: 'https://lh3.googleusercontent.com/a50PszDUoeFQulGeoOsQK9iV6yNI7QkicCnTaCB1DqejGeoB1Pc3lI3iZSiMqWOrqPTWgJSB=w220-c-h220-e100-rwu-v1',
   }, {
@@ -185,8 +181,10 @@ router.get('/', (req, res, next) => {
 
   console.log(`Requested: ${req.query.genre}`);
 
+  const param = decode(req.query.genre);
+
   musicCollection.forEach((entry) => {
-    if (entry.genre === decode(req.query.genre) || req.query.genre === '') {
+    if (entry.genre === param || param === '' || param === undefined) {
       resp += `"${iteration}": {"name": "${entry.name}","image": "${entry.image}","genre": "${entry.genre}"},`;
       iteration++;
     }
