@@ -1,10 +1,18 @@
 <%- include partials/head.ejs %>
 
 <body>
-  <nav class="primary-nav">
+  <section class="primary-nav">
     <h1><%= title %></h1>
-  </nav>
-  <p>Welcome to <%= title %></p>
+    <%- include partials/nav.ejs %>
+  </section>
+  <section class="primary-content">
+    <p>Select Music From the Library!</p>
+    <div class="cards">
+      <div class="card">
+
+      </div>
+    </div>
+  </section>
   <%- include partials/scripts.ejs %>
 </body>
 

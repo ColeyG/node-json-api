@@ -36,7 +36,34 @@ p {
   width: 100%;
   padding: 15px;
   background-color: $blue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
   h1 {
     color: $white;
   }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    li {
+      margin: 5px;
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+}
+.primary-content {
+  padding: 15px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
