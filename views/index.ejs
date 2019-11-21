@@ -2,7 +2,9 @@
 
 <body>
   <section class="primary-nav">
-    <h1><%= title %></h1>
+    <a href="/">
+      <h1><%= title %></h1>
+    </a>
     <%- include partials/nav.ejs %>
   </section>
   <section class="primary-content">
@@ -11,6 +13,7 @@
 
     </div>
   </section>
+  <div class="sr-only sort"><%= genre %></div>
   <%- include partials/scripts.ejs %>
 </body>
 

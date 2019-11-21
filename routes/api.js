@@ -1,4 +1,5 @@
 const express = require('express');
+const decode = require('unescape');
 
 const router = express.Router();
 
@@ -182,9 +183,13 @@ router.get('/', (req, res, next) => {
   let resp = '{';
   let iteration = 0;
 
+  console.log(`Requested: ${req.query.genre}`);
+
   musicCollection.forEach((entry) => {
-    resp += `"${iteration}": {"name": "${entry.name}","image": "${entry.image}","genre": "${entry.genre}"},`;
-    iteration++;
+    if (entry.genre === decode(req.query.genre) || req.query.genre === '') {
+      resp += `"${iteration}": {"name": "${entry.name}","image": "${entry.image}","genre": "${entry.genre}"},`;
+      iteration++;
+    }
   });
 
   resp = resp.replace(/,([^,]*)$/, '}$1');
