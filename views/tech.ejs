@@ -1,0 +1,33 @@
+<%- include partials/head.ejs %>
+
+<body>
+  <section class="primary-nav">
+    <a href="/">
+      <h1><%= title %></h1>
+    </a>
+    <%- include partials/nav.ejs %>
+  </section>
+  <section class="primary-content">
+    <p>I am going to use this page to talk about how I grabbed the data!</p>
+    <p>I scraped the info from my google music account using the following and made it into a json structure
+      console.log! A little messy but I didn't have to write JSON!</p>
+    <p>The API is also very simple, returning a list of albums based on the genre query like so:
+      /api?genre=Punk</p>
+    <br>
+    <p>document.querySelectorAll('.material-card').forEach((element)=> {<br>
+      element.childNodes.forEach((childEl)=>{<br>
+      if(childEl.classList.contains('image-wrapper')){<br>
+      childEl.childNodes.forEach((childChild)=>{<br>
+      if(childChild.classList.contains('image-inner-wrapper')){<br>
+      childChild.childNodes.forEach((childChildChild)=>{<br>
+      x+= "{\n'image':'"+childChildChild.src+"'\n},";<br>
+      });<br>
+      }<br>
+      });<br>
+      }<br>
+      });<br>
+      });<br></p>
+  </section>
+</body>
+
+</html>

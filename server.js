@@ -32,5 +32,7 @@ const apiRoute = require('./routes/api');
 // const usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
+app.use('/about', indexRouter);
+app.use('/tech', indexRouter);
 app.use('/api', apiRoute);
 // app.use('/users', usersRouter);
