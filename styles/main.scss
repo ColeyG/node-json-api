@@ -27,7 +27,8 @@ a {
 body {
   background-color: $white;
 }
-h1 {
+h1,
+h2 {
   @include gentium($color: $black, $size: 32pt);
   margin: 0;
 }
@@ -44,7 +45,7 @@ p {
   align-items: center;
   flex-direction: row;
   box-sizing: border-box;
-  h1 {
+  h2 {
     color: $white;
   }
   nav ul {
